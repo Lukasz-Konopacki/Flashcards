@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'Play';
+    src: url('/Front/Fonts/Play-Bold.ttf') format('truetype')
+}
+
+@media print {
+    .main-menu {
+      display: none !important;
+      visibility: hidden !important;;;
+    }
+
+    .main-content{
+        grid-row: 1 / -1 !important;
+        grid-column: 1 / -1 !important;
+    }
+
+    .footer{
+        display: none !important;
+        visibility: hidden !important;; 
+      }
+}
+
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+h1, h2,h3, h4, h5, h6{
+    margin: 0px;
+}
+
+.container{
+   display: grid;
+   grid-template-rows:  9fr 9fr 1fr;
+   grid-template-columns:  2fr 6fr 6fr;
+   background-color: blue;
+}
+
+/* menu */
+
+.main-menu{
+    background-color: #1d4775;
+    color: white;
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+
+    /* padding: 0vw 2vh 1vw 2vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-logo{
+    font-family: "Play", Times, serif;
+    border-color: white;
+    border-bottom: 3px solid white;
+    text-align: center;
+    padding: 1vw;
+    margin: 1vw;
+}
+
+.menu-item-name{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.menu-item-name i{
+    padding-right: 10px;
+}
+
+.menu-item :hover, .menu-item-collapsible :hover{
+    color: white;
+    background-color: #86abd3;
+}
+
+.menu-subitem{
+    color: #86abd3;
+    padding: 10px 0 10px 30px;
+}
+
+.menu-subitem:hover{
+    color: white;
+    background-color: #86abd3;
+}
+
+
+.main-content{
+    background-color:  #d9d9d9;
+    grid-row: 1 / 3;
+    grid-column: 2 / -1;
+}
+
+
+/* Flashcards */
+
+.set-name{
+    font-size: 1.5em;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.set-name i{
+    margin: auto 0;
+}
+
+.set-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 40px;
+}
+
+.set-banner h2{
+    margin: auto 0;
+}
+
+.set-banner a{
+    background-color: #1d4775;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.set-banner a:hover{
+    background-color: #143252;
+}
+
+.set-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    font-size: 30px;
+}
+
+.card-text{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.card-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-buttons i{
+    color: #787878;
+    padding: 10px;
+}
+
+/* About */
+
+.about{
+    background-color: white;
+    margin:  20px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.about h1{
+    text-align: center;
+}
+
+.about h3{
+    padding: 15px 5px;
+}
+
+.about p{
+    text-align: justify;
+}
+
+.about ul{
+    list-style-type: circle;
+    margin: 0px;
+}
+
+.about ol{
+    display: flex;
+    flex-direction: row;
+    list-style-type: upper-roman;
+    list-style-position:inside;
+    margin: 0px;
+}
+
+.about ol li{
+    padding-left: 10px;
+}
+
+.about img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.about table{
+    font-size: 30px;
+    border-collapse: collapse;
+}
+
+.about th {
+    padding: 12px;
+    text-align: center;
+    background-color: #1d4775;
+    color: white;
+}
+
+.about td{
+    text-align: center;
+    padding: 8px;
+}
+
+.about .name-col{
+    text-align: left;
+}
+
+.about tr:nth-child(even){background-color: #f2f2f2;}
+
+.about tr:hover {background-color: #ddd;}
+
+.about table a{
+    background-color: #1d4775;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.footer{
+    text-align: center;
+    background-color:  black;
+    color: white;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
