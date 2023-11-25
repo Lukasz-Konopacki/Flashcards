@@ -1,0 +1,81 @@
+
+/* Flashcards */
+
+.set-name{
+    font-size: 1.5em;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.set-name i{
+    margin: auto 0;
+}
+
+.set-name input{
+    border: none;
+    display: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: #e8edf1;
+}
+
+.set-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 40px;
+}
+
+.set-banner h2{
+    margin: auto 0;
+}
+
+.set-banner a{
+    background-color: #1d4775;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.set-banner a:hover{
+    background-color: #143252;
+}
+
+.set-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    font-size: 30px;
+}
+
+.card-text{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.card-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-buttons i{
+    color: #787878;
+    padding: 10px;
+}

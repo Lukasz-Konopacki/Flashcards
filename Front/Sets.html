@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Set Name</title>
     <link rel="stylesheet" href="/Front/Styles/styles.css">
+    <link rel="stylesheet" href="/Front/Styles/SummaryView.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <div class="container">
@@ -38,38 +40,12 @@
             </div>
         </div>
         <div class="main-content">
-            <div class="about">
-                <h1> Aplikacja do nauki języka</h1>
-                <p>
-                    Projekt zaliczeniowy z przedmiotu "Technologie Internetu" celem projektu jest stworzenie aplikacji internetowej do nauki języków. 
-                    Główną funkcjonalnością projektu jest system fiszek,  które użytkownicy będą mogli tworzyć, importować, edytować i usuwać. 
-                    Aplikacja będzie korzystać z bazy danych do przechowywania zestawów fiszek, co pozwoli użytkownikom na łatwe zarządzanie swoimi materiałami do nauki.
-                    W przyszłości planowane jest rozszerzenie aplikacji o quizy językowe, gry, interaktywne lekcje.
-                </p>
-            
-                <h3>Zakres funkcjonalności</h3>
-                <ul>
-                    <li>Zaimplemenotowanie możliwości dodawania/edycji/usuwania, zestawów fiszek oraz możliwość odpalenia zestawu w trybie gry.</li>
-                    <li>Zapisyywanie utworzonych zbiorów i pojedyczych fiszek w bazie danych</li>
-                    <li>Współdziałanie z instjiejącym tłumaczem np. Google translate, Pons w celu podpowiedzi tłumaczenia</li>
-                </ul>
-            
-                <h3>Technologie, którę chciałbym wykorzystać do stworzenia aplikacji</h3>
-                <ol>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>MySql</li>
-                </ol>
-            
-                <h3>Wstępna makieta interfejsu użytkownika</h3>
-                <img src="https://raw.githubusercontent.com/Lukasz-Konopacki/Flashcards/main/Front/img/Frame%201.png" alt="makieta interfejsu użytkownika" width="960" height="540">
-            
-            
-                <h3>Wstępny projekt tabeli z informacjami o  poszczególnych zbiorach</h3>
-                
-                <table>
+            <div class="title">
+                <h1>Flashcards sets</h1>
+                <a href="AddSet.html">Add+</a>
+            </div>
+
+            <table>
                 <tr>
                     <th>No</th>
                     <th>Name</th>
@@ -100,10 +76,9 @@
                     <td>45</td>
                     <td> <a>Edit</a> <a>Delete</a></td>
                 </tr>
-                </table>
-            </div>
-        </div>
+            </table>
             
+        </div>
         <div class="footer">
             <p>Technologie Internetu 2023/2024, Łukasz Konopacki s23338</p>
         </div>
