@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         changeSetNameButton.style.display = 'none';
 
-        setNameContainer.style.backgroundColor = '#e8edf1';
+        setNameContainer.style.border = "2px solid #000000";
 
     })
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         changeSetNameButton.style.display = 'inline-block';
 
-        setNameContainer.style.backgroundColor = 'white';
+        setNameContainer.style.border = 'none'
     })
 
 

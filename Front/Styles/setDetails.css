@@ -18,8 +18,11 @@
 
 .set-name i:hover{
     cursor: pointer;
-    color: black;
-    
+    color: black; 
+}
+
+.set-name h2{
+    color: #787878;
 }
 
 .set-name input{
@@ -30,7 +33,7 @@
     margin: 0px;
     padding: 0px;
     width: 100%;
-    background-color: #e8edf1;
+    background-color: white;
 }
 
 /* Flashcard banner with Add button */
