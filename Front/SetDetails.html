@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Set Name</title>
     <link rel="stylesheet" href="/Front/Styles/styles.css">
-    <link rel="stylesheet" href="/Front/Styles/DetailsView.css">
+    <link rel="stylesheet" href="/Front/Styles/SetDetails.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="/Front/Scripts/editSetTitle.js"></script>
+    <script src="/Front/Scripts/setEditing.js"></script>
 </head>
 <body>
     <div class="container">
@@ -19,7 +19,7 @@
             <div class="menu-item-collapsible">
                 <div class="menu-item-name">
                     <i class="fa-solid fa-layer-group"></i>
-                    <h3><a href="Sets.html">Flashcards</a></h3>
+                    <h3><a href="SetsList.html">Flashcards</a></h3>
                 </div>
             </div>
 
@@ -33,13 +33,33 @@
 
             <div class="menu-item">
                 <div class="menu-item-name">
-                    <i class="fa-solid fa-gear"></i>
+                    <i class="fa-solid fa-phone"></i>
                     <h3><a href="Contact.html">Contact</a></h3>
-                </div>
-                
+                </div> 
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-name">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <h3><a href="LogIn.html">LogOut</a></h3>
+                </div>               
             </div>
         </div>
         <div class="main-content">
+
+            <div id="add-flashcard-container" class="hidden">
+                <div class="top-bar">
+                    <div id="close-flashcard" class="button-div">X</div>
+                </div>
+                <input id="flashcard-front" type="text" placeholder="Front">
+                <hr>
+                <input id="flashcard-back" type="text" placeholder="Back">
+                <div class="down-bar">
+                    <div id="save-flashcard" class="button-div" >Save</div>
+                    <div id="check-flashcard" class="button-div">Check</div>
+                </div>
+            </div>
+
             <div class="set-name">
                 <h2>Partes del Cuerpo</h2>
                 <input type="text"></input>
@@ -47,138 +67,138 @@
             </div>
             <div class="set-banner">
                 <h2>Cards</h2>
-                <a>Add+</a>
+                <div class="button-div" id="add-flashcards">Add +</div>
             </div>
             <div class="set-cards">
-                <div class="card">
+                <div class="card" data-card-id="1">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
                 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-text">
-                        <span>El Mano</span>
+                        <span class="card-front">El Mano</span>
                         <hr>
-                        <span>Ręka</span>
+                        <span class="card-back">Ręka</span>
                     </div>
                     <div class="card-buttons">
-                        <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pencil card-edit-button"></i>
+                        <i class="fa-solid fa-trash card-delete-button"></i>
                     </div>
                 </div>
             </div>

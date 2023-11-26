@@ -28,6 +28,10 @@
     border-radius: 20px;
 }
 
+.title a:hover{
+    background-color: #143252;
+}
+
 table{
     font-size: 30px;
     border-collapse: collapse;
@@ -43,13 +47,31 @@ th {
 td{
     text-align: center;
     padding: 8px;
+    height: 100%;
 }
 
-table a{
+.button-div{
     background-color: #1d4775;
     color: white;
     padding: 3px 10px;
     border-radius: 5px;
+    margin: auto 2px;
+    cursor: pointer;
+}
+
+.button-div:hover{
+    background-color: #143252;
+}
+
+.button-div a{
+    color: white;
+}
+
+.set-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 tr:nth-child(even){background-color: #f2f2f2;}

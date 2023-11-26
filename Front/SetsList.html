@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Name</title>
+    <link rel="stylesheet" href="/Front/Styles/styles.css">
+    <link rel="stylesheet" href="/Front/Styles/SetsList.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/Front/Scripts/setsList.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-menu">
+            <div class="menu-logo">
+                <h2>App Name </h2>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-name">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h3><a href="SetsList.html">Flashcards</a></h3>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-name">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <h3><a href="About.html">About</a></h3>
+                </div>       
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-name">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3><a href="Contact.html">Contact</a></h3>
+                </div>               
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-name">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <h3><a href="LogIn.html">LogOut</a></h3>
+                </div>               
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="title">
+                <h1>Flashcards sets</h1>
+                <a href="SetDetails.html">Add +</a>
+            </div>
+
+            <table id="sets-table">
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>number of cards</th>
+                    <th>Buttons</th>
+                </tr>
+                <tr class="card-set">
+                    <td>1</td>
+                    <td class="name-col">Ropas</td>
+                    <td>34</td>
+                    <td class="set-buttons">
+                        <div class="button-div" ><a href="Game.html">Play</a></div>
+                        <div class="button-div" ><a href="SetDetails.html">Edit</a></div>
+                        <div class="button-div" ><a class="delete-set">Delete</a></div>    
+                    </td>
+                </tr>
+                <tr class="card-set">
+                    <td>2</td>
+                    <td class="name-col">Animales</td>
+                    <td>22</td>
+                    <td class="set-buttons">
+                        <div class="button-div" ><a href="Game.html">Play</a></div>
+                        <div class="button-div" ><a href="SetDetails.html">Edit</a></div>
+                        <div class="button-div" ><a class="delete-set">Delete</a></div>    
+                    </td>
+                </tr>
+                <tr class="card-set">
+                    <td>3</td>
+                    <td class="name-col">Partes del cuerpo</td>
+                    <td>13</td>
+                    <td class="set-buttons">
+                        <div class="button-div" ><a href="Game.html">Play</a></div>
+                        <div class="button-div" ><a href="SetDetails.html">Edit</a></div>
+                        <div class="button-div" ><a class="delete-set">Delete</a></div>    
+                    </td>
+                </tr>
+                <tr class="card-set">
+                    <td>4</td>
+                    <td class="name-col">Tiempo</td>
+                    <td>45</td>
+                    <td class="set-buttons">
+                        <div class="button-div" ><a href="Game.html">Play</a></div>
+                        <div class="button-div" ><a href="SetDetails.html">Edit</a></div>
+                        <div class="button-div" ><a class="delete-set">Delete</a></div>    
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="footer">
+            <p>Technologie Internetu 2023/2024, Łukasz Konopacki s23338</p>
+        </div>
+    </div>
+</body>
+</html>
