@@ -1,0 +1,39 @@
+.menu{
+    background-color: #1d4775;
+    color: white;
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+
+    /* padding: 0vw 2vh 1vw 2vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-family: "Play", Times, serif;
+    border-color: white;
+    border-bottom: 3px solid white;
+    text-align: center;
+    padding: 1vw;
+    margin: 1vw;
+}
+
+.name{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.icon{
+    padding-right: 10px;
+}
+
+.item :hover, .menu-item-collapsible :hover{
+    color: white;
+    background-color: #86abd3;
+}

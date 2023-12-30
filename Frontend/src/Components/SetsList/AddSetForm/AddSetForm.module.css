@@ -1,0 +1,63 @@
+input:focus, textarea:focus{
+    outline:none;
+}
+
+hr {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white; 
+    border: #000 2px solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    text-align: center;
+    padding: 20px;
+}
+
+.button{
+    background-color: #1d4775;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.button:hover{
+    background-color: #143252;
+    cursor: pointer;
+}
+
+.input{
+    font-size: 90px;
+    line-height: 2em;
+    border: none;
+    text-align: center; 
+}
+
+.topBar{
+    display: flex;
+    justify-content: right;
+}
+
+.downBar{
+    display: flex;
+    justify-content: center;
+}
+
+.downBar div{
+    margin: 10px;
+}
+
+.error{
+    color: red;
+}
+

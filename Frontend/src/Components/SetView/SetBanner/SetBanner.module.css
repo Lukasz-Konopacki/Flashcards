@@ -1,0 +1,22 @@
+.banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 40px;
+}
+
+.banner h2{
+    margin: auto 0;
+}
+
+.button{
+    background-color: #1d4775;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.button:hover{
+    background-color: #143252;
+    cursor: pointer;
+}

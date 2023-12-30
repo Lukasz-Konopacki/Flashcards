@@ -1,0 +1,29 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    font-size: 30px;
+}
+
+.text{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon{
+    color: #787878;
+    padding: 10px;
+}
+
+.icon:hover{
+    color: #000;
+}

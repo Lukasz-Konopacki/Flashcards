@@ -1,0 +1,80 @@
+.setsList{
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.title{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 40px;
+}
+
+.title h1{
+    margin: auto 0;
+    color: #6d6d6d;
+}
+
+.title a{
+    background-color: #1d4775;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+}
+
+.title a:hover{
+    background-color: #143252;
+}
+
+table{
+    font-size: 30px;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 12px;
+    text-align: center;
+    background-color: #1d4775;
+    color: white;
+}
+
+td{
+    text-align: center;
+    padding: 8px;
+    height: 100%;
+}
+
+.button{
+    background-color: #1d4775;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin: auto 2px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #143252;
+}
+
+.button a{
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #d2dae3;}
+
+tr:hover {background-color: #919191;}

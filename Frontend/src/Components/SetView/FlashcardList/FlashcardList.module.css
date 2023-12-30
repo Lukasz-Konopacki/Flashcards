@@ -1,0 +1,6 @@
+.set{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #d9d9d9;
+}

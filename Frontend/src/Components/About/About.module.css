@@ -1,0 +1,76 @@
+.about{
+    background-color: white;
+    margin:  20px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.about h1{
+    text-align: center;
+}
+
+.about h3{
+    padding: 15px 5px;
+}
+
+.about p{
+    text-align: justify;
+}
+
+.about ul{
+    list-style-type: circle;
+    margin: 0px;
+}
+
+.about ol{
+    display: flex;
+    flex-direction: row;
+    list-style-type: upper-roman;
+    list-style-position:inside;
+    margin: 0px;
+}
+
+.about ol li{
+    padding-left: 10px;
+}
+
+.about img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.about table{
+    font-size: 30px;
+    border-collapse: collapse;
+}
+
+.about th {
+    padding: 12px;
+    text-align: center;
+    background-color: #1d4775;
+    color: white;
+}
+
+.about td{
+    text-align: center;
+    padding: 8px;
+}
+
+.about .names{
+    text-align: left;
+}
+
+.about tr:nth-child(even){background-color: #f2f2f2;}
+
+.about tr:hover {background-color: #ddd;}
+
+.about table button{
+    background-color: #1d4775;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+}

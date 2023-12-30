@@ -1,0 +1,38 @@
+#contact{
+    background-color: white;
+    margin:  20px auto;
+    border-radius: 30px;
+    padding: 30px;
+    font-size: 20px;
+    max-width: 150ex;
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact label{
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+#contact input{
+    font-size: 20px;
+    max-width: 30ex;
+}
+
+#contact textarea{
+    font-size: 20px;
+    max-width:  80ex;
+    height:  8em;
+}
+
+#contact #submit{
+    margin-top: 2em;
+    padding: 6px;
+    background-color:#1d4775;
+    color: white;
+    max-width: 10em;
+}

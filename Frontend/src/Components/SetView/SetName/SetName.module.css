@@ -1,0 +1,34 @@
+
+.name{
+    font-size: 1.5em;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon{
+    margin: auto 0;
+    color: #787878;
+}
+
+.name .icon:hover{
+    cursor: pointer;
+    color: black; 
+}
+
+.name h2{
+    color: #787878;
+}
+
+.name input{
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: white;
+}
