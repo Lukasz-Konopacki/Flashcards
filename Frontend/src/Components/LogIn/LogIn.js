@@ -15,7 +15,8 @@ const LogIn = () =>{
         Axios.post(`http://localhost:8080/login`, {login: login, password: password})
         .then( (response) =>{
             console.log(response);
-            localStorage.setItem('token', response.data.token);
+            if(response.data.token)
+                localStorage.setItem('token', response.data.token);
             navigate('/');
         })
     }
