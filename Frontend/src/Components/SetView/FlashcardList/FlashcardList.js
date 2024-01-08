@@ -10,7 +10,6 @@ const FlashcardList = (props) =>{
     const remove = props.remove;
     const edit = props.edit;
 
-
     return(
     <div className={styles.set}>
       {

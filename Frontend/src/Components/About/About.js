@@ -29,7 +29,7 @@ const About = () =>{
             </ol>
         
             <h3>Wstępna makieta interfejsu użytkownika</h3>
-            <img src="https://raw.githubusercontent.com/Lukasz-Konopacki/Flashcards/main/Front/img/Frame%201.png" alt="makieta interfejsu użytkownika" width="960" height="540"/>
+            <img src="/Img/Frame1.png" alt="makieta interfejsu użytkownika" width="960" height="540"/>
         
         
             <h3>Wstępny projekt tabeli z informacjami o  poszczególnych zbiorach</h3>

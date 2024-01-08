@@ -1,4 +1,5 @@
 const express = require('express');
+const verifyToken = require('../middlewares/verifyToken.js')
 const router =  express.Router();
 
 const {
@@ -15,6 +16,16 @@ const {
     DeleteSetById,
     ChangeSetName
 } = require('../controllers/Sets.js')
+
+const {
+    Register,
+    Login
+} = require('../controllers/Users.js')
+
+router.use('/register', Register)
+router.use('/login', Login)
+
+router.use(verifyToken);
 
 router.use("/sets", GetSets)
 router.use('/flashcards', GetAllFlashcards);

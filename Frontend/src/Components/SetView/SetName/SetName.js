@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil } from '@fortawesome/free-solid-svg-icons'
 
 const SetName = (props) => {
-
     const [isEditing, setIsEditing] = React.useState(false);
     const [setName, setSetName] = React.useState(props.setName);
     const setId = props.setId;
@@ -27,7 +26,8 @@ const SetName = (props) => {
         cache: 'default',
         headers: {
             'Access-Control-Allow-Origin': '*',
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            'x-access-token': localStorage.getItem('token')
         },
         body: JSON.stringify(set)
       })

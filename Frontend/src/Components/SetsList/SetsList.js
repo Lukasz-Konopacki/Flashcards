@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./SetsList.module.css"
 import { Link } from "react-router-dom";
 import AddSetForm from "./AddSetForm/AddSetForm";
-import SetName from "../SetView/SetName/SetName";
 
 
 const SetsList = () =>{
@@ -16,7 +15,8 @@ const SetsList = () =>{
             mode: 'cors',
             cache: 'default',
             headers: {
-                'Access-Control-Allow-Origin': '*'
+                'Access-Control-Allow-Origin': '*',
+                'x-access-token': localStorage.getItem('token')
             }
         }
         fetch('http://localhost:8080/sets',options)
@@ -27,11 +27,11 @@ const SetsList = () =>{
                   key: index + 1,
                 }));
                 setSets(setsWithKey);
-                //console.log(setsWithKey);
             })
     }, [])
 
     const deleteSet = (setId) => {
+        console.log(setId);
         const confirmed = window.confirm('Are you sure you want to delete this set?');
         if (confirmed) {
 
@@ -40,7 +40,8 @@ const SetsList = () =>{
                 mode: 'cors',
                 cache: 'default',
                 headers: {
-                    'Access-Control-Allow-Origin': '*'
+                    'Access-Control-Allow-Origin': '*',
+                    'x-access-token': localStorage.getItem('token')
                 }
             }
             fetch(`http://localhost:8080/deleteSet/${setId}`,options)
@@ -50,10 +51,12 @@ const SetsList = () =>{
     };
 
     const addSet = (setName) =>{
+
         const newSet = {
             id: null,
             name: setName,
             cardNumber: 0,
+            role: 'admin',
             key: Math.max(...sets.map(obj => obj.key)) + 1
           }
     
@@ -63,12 +66,16 @@ const SetsList = () =>{
         cache: 'default',
         headers: {
             'Access-Control-Allow-Origin': '*',
+            'x-access-token': localStorage.getItem('token')
         },
         })
         .then(response => response.json())
-        .then( response => newSet.id = response.Id)
-        .then(response => setSets([...sets, newSet]))
-        .then( response => console.log(sets))  
+        .then( response => {
+            console.log(response[0][0].SetId)
+            newSet.id = response[0][0].SetId
+            setSets([...sets, newSet])
+            console.log(newSet)
+        })
 
           hideAddForm();
     }
@@ -103,8 +110,8 @@ const SetsList = () =>{
                         <td>{el.cardNumber}</td>
                         <td className={styles.buttons}>
                             <div className={styles.button} ><Link>Play</Link></div>
-                            <div className={styles.button} ><Link to={`/set/${el.id}/${el.name}`}>Edit</Link></div>
-                            <div className={styles.button} onClick={() => deleteSet(el.id)}><Link>Delete</Link></div>    
+                           {el.role == 'admin' && <div className={styles.button} ><Link to={`/set/${el.id}/${el.name}`}>Edit</Link></div>} 
+                           {el.role == 'admin' && <div className={styles.button} onClick={() => deleteSet(el.id)}><Link>Delete</Link></div>} 
                         </td>
                     </tr>
                     ))}

@@ -13,7 +13,7 @@ const Flashcard = ({id, front, back, remove, edit}) =>{
           </div>
           <div className={styles.buttons}>
               <FontAwesomeIcon icon={faPaintBrush} className={styles.icon} onClick={() => edit(id)}/>
-              <FontAwesomeIcon icon={faTrash} className={styles.icon} onClick={() => remove(id)}/>
+              <FontAwesomeIcon icon={faTrash} className={styles.icon} onClick={() => { remove(id)} }/>
           </div>
       </div>
     );

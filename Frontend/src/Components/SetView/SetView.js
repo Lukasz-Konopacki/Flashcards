@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }from "react";
 import SetBanner from "./SetBanner/SetBanner";
 import FlashcardList from "./FlashcardList/FlashcardList";
 import AddFlashcardForm from "./AddFlashcardForm/AddFlashcardForm";
@@ -7,23 +7,26 @@ import { useParams } from 'react-router-dom';
 
 const SetView = () =>{
   const { setId, setName } = useParams(); // id zestawu
-  const [flashcards, setFlashcards] = React.useState([]); //kolekcja fiszek
-  const [UpdateForm, setUpdateForm] = React.useState(false); // czy formularz edycji/ dodawania ma byc widoczny
-  const [chosenFlashcard, setChosenFlashcard] = React.useState({id: null, Front: null, Back: null}); // wybrana fiszka uzywane przy edycji
+  const [flashcards, setFlashcards] = useState([]); //kolekcja fiszek
+  const [UpdateForm, setUpdateForm] = useState(false); // czy formularz edycji/ dodawania ma byc widoczny
+  const [chosenFlashcard, setChosenFlashcard] = useState({id: null, Front: null, Back: null}); // wybrana fiszka uzywane przy edycji
 
   //Pobranie wartości z API
-  React.useEffect(() => { 
+  React.useEffect(() => {
+    
     fetch(`http://localhost:8080/set/${setId}`,{
       method: 'GET',
       mode: 'cors',
       cache: 'default',
       headers: {
           'Access-Control-Allow-Origin': '*',
-          
+          'x-access-token': localStorage.getItem('token')
       }
-    }) 
+    })
     .then(response => response.json())
-    .then((response) => {setFlashcards(response);})
+    .then((response) => {
+      setFlashcards(response);
+    }) 
     }, [])
 
   //Zapisanie dodawania/edycji fiszki
@@ -35,7 +38,8 @@ const SetView = () =>{
       const newFlashcard = {
         Id: null,
         Front: topValue,
-        Back: bottomValue
+        Back: bottomValue,
+        SetId: setId
       }
 
       fetch(`http://localhost:8080/addFlashcard/${setId}`,{
@@ -44,15 +48,16 @@ const SetView = () =>{
         cache: 'default',
         headers: {
             'Access-Control-Allow-Origin': '*',
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            'x-access-token': localStorage.getItem('token')
         },
         body: JSON.stringify(newFlashcard)
       })
       .then(response => response.json())
-      .then( response => newFlashcard.Id = response.Id)
-      //.then( r => console.log(newFlashcard))  
-
-      setFlashcards([...flashcards, newFlashcard]);
+      .then(response => {
+        newFlashcard.Id = response.insertId;
+        setFlashcards([...flashcards, newFlashcard]);
+      });
     }
     else{ // edycja fiszki
       chosenFlashcard.Front = topValue;
@@ -64,7 +69,8 @@ const SetView = () =>{
         cache: 'default',
         headers: {
             'Access-Control-Allow-Origin': '*',
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            'x-access-token': localStorage.getItem('token')
         },
         body: JSON.stringify(chosenFlashcard)
       })
@@ -83,7 +89,8 @@ const SetView = () =>{
           mode: 'cors',
           cache: 'default',
           headers: {
-              'Access-Control-Allow-Origin': '*'
+              'Access-Control-Allow-Origin': '*',
+              'x-access-token': localStorage.getItem('token')
           }
         });
         

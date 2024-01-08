@@ -5,39 +5,42 @@ import Contact from './Components/Contact/Contact';
 import About from './Components/About/About';
 import SetsList from './Components/SetsList/SetsList';
 import NotFound from './Components/NotFound/NotFound';
-import {createBrowserRouter, createRoutesFromElements, Route, Outlet, RouterProvider} from 'react-router-dom'
+import LogIn from './Components/LogIn/LogIn';
+import SignUp from './Components/SignUp/SignUp';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
 
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path = "/" element = {<Root/>}>
-          <Route index element={<SetsList/>}/>
-          <Route path="about" element={<About/>}/>
-          <Route path="contact" element={<Contact/>}/>
-          <Route path="set/" element={<SetView/>}/>
-          <Route path="set/:setId/:setName" element={<SetView/>}/>
-          <Route path='*' element={<NotFound />}/>
-      </Route>
-    )
-  )
-
   return (
-      <div>
-        <RouterProvider router={router}/> 
-      </div>
+    <Router>
+        <Routes>
+          <Route path='/' element={<PrivateRoute/>}>
+              <Route path="/" element={<Root />}>
+              <Route path="/" element={<SetsList />}/>
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />}/>
+              <Route path="/set" element={<SetView />} />
+              <Route path="/set/:setId/:setName" element={<SetView />}/>
+            </Route>
+          </Route>
+          <Route path="/login" element={<LogIn/>} />
+          <Route path="/register" element={<SignUp/>} />         
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+    </Router>
   );
 }
 
-const Root = () =>{
-  return(
+const Root = () => {
+  return (
     <div className="container">
-      <Menu/>
+      <Menu />
       <div className='content'>
-        <Outlet/>
+        <Outlet />
       </div>
     </div>
-  )  
+  )
 }
 
 export default App;
